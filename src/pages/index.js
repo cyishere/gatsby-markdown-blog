@@ -1,3 +1,15 @@
-import React from "react"
+import React from 'react';
+import Layout from '../templates/layout';
+import PostsList from '../components/posts';
 
-export default () => <div>Hello world!</div>
+const Index = () => {
+    return (
+        <Layout>
+            <div className="uk-padding uk-margin">
+                <PostsList />
+            </div>
+        </Layout>
+    );
+};
+
+export default Index;
