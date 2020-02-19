@@ -1,6 +1,6 @@
 # About GatsMark
 
-**NOTE**: Unfinished. I'm still working on it.
+💥 **NOTE**: Unfinished. I'm still working on it.
 
 **GatsMark** is a blog boilerplate with Markdown with GatsbyJS.
 
