@@ -1,1 +1,11 @@
 @import '../../node_modules/uikit/dist/css/uikit.min.css';
+
+.uk-article {
+    pre {
+        padding: 16px;
+        overflow: auto;
+        background-color: #f6f8fa;
+        border: none;
+        border-radius: 3px;
+    }
+}
