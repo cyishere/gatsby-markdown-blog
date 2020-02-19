@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import Layout from './layout';
 
 export const query = graphql`
@@ -15,14 +16,21 @@ export const query = graphql`
             }
             html
         }
+        site {
+            siteMetadata {
+                title
+            }
+        }
     }
 `;
 
 const PostPage = ({ data }) => {
     const post = data.markdownRemark;
-    console.log(post);
     return (
         <Layout>
+            <Helmet>
+                <title>{post.frontmatter.title} | {data.site.siteMetadata.title}</title>
+            </Helmet>
             <div className="uk-width-1-1 uk-margin-bottom">
                 <img src={post.frontmatter.hero} alt={post.frontmatter.title} />
             </div>

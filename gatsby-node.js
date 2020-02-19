@@ -1,5 +1,19 @@
 const path = require('path');
 
+const createSinglePostPage = (createPage, posts) => {
+    const singlePostPageTemplate = path.resolve(`./src/templates/post.js`);
+
+    posts.forEach(({ node }) => {
+        createPage({
+            path: node.frontmatter.path,
+            component: singlePostPageTemplate,
+            context: {
+                pathName: node.frontmatter.path
+            }
+        });
+    });
+}
+
 const createCategoryPages = (createPage, posts) => {
     const postsByCategoryTemplate = path.resolve('src/templates/posts-by-category.js');
 
@@ -56,14 +70,5 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createCategoryPages(createPage, posts);
 
-    posts.forEach(({ node }) => {
-
-        createPage({
-            path: node.frontmatter.path,
-            component: path.resolve(`./src/templates/post.js`),
-            context: {
-                pathName: node.frontmatter.path
-            }
-        });
-    })
+    createSinglePostPage(createPage, posts);
 };

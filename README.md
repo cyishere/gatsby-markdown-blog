@@ -12,5 +12,6 @@
 - [ ] Create pages by Markdown contents;
 - [ ] Posts by author;
 - [ ] Pagination;
+- [ ] SEO: [https://www.gatsbyjs.org/docs/add-seo-component/](https://www.gatsbyjs.org/docs/add-seo-component/);
 
 I grabbed some articles from [The A.V. Club](https://www.avclub.com/) for dummy content.

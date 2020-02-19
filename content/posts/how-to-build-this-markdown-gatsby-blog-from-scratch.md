@@ -41,3 +41,7 @@ Add to deal with the code block.
 ```sh
 yarn add gatsby-remark-prismjs prismjs
 ```
+
+```sh
+yarn add gatsby-plugin-react-helmet react-helmet
+```
