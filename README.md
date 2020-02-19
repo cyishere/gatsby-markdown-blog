@@ -5,6 +5,12 @@
 **GatsMark** is a blog boilerplate with Markdown with GatsbyJS.
 
 ## TO DO
-- [ ] 根据分类显示文章列表页面；
-- [ ] 同一分类下的navigation；
+- [x] Posts by category;
+- [ ] Navigation in the same category；
+- [ ] Display all tags in one page;
+- [ ] Posts by tag;
+- [ ] Create pages by Markdown contents;
+- [ ] Posts by author;
+- [ ] Pagination;
 
+I grabbed some articles from [The A.V. Club](https://www.avclub.com/) for dummy content.

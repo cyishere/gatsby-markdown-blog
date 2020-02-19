@@ -1,10 +1,10 @@
 ---
-path: "how-to-build-this-markdown-gatsby-blog-from-scratch"
+path: "post/how-to-build-this-markdown-gatsby-blog-from-scratch"
 title: "How To Build This Markdown-Gatsby-Blog-From-Scratch"
 author: "CY"
 date: "2020-02-17"
 category: "coding"
-hero: "images/gatsby-markdown.jpg"
+hero: "../images/gatsby-markdown.jpg"
 tags: ["markdown", "gatsbyjs", "reactjs"]
 ---
 

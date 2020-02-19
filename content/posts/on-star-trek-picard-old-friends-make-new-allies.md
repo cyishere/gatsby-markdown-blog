@@ -1,5 +1,5 @@
 ---
-path: "on-star-trek-picard-old-friends-make-new-allies"
+path: "post/on-star-trek-picard-old-friends-make-new-allies"
 title: "On Star Trek: Picard, old friends make new allies"
 author: "Zack Handlen"
 date: "2020-02-19"

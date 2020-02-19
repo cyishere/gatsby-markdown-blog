@@ -1,5 +1,5 @@
 ---
-path: "sarah-connor-doesn-t-thrash-linda-hamilton-on-her"
+path: "post/sarah-connor-doesn-t-thrash-linda-hamilton-on-her"
 title: '“Sarah Connor doesn’t thrash”: Linda Hamilton on her enduring Terminator character'
 author: "Alex McLevy"
 date: "2020-02-13"

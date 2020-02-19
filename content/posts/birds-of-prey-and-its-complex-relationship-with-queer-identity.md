@@ -1,5 +1,5 @@
 ---
-path: "birds-of-prey-and-its-complex-relationship-with-queer-identity"
+path: "post/birds-of-prey-and-its-complex-relationship-with-queer-identity"
 title: "Birds Of Prey and its complex relationship with queer identity"
 author: "Shannon Miller"
 date: "2020-02-12"

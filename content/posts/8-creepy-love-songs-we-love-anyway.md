@@ -1,5 +1,5 @@
 ---
-path: "8-creepy-love-songs-we-love-anyway"
+path: "post/8-creepy-love-songs-we-love-anyway"
 title: "8 creepy love songs we love anyway"
 author: "Caroline Siede"
 date: "2020-02-17"

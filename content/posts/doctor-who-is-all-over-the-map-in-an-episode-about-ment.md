@@ -1,5 +1,5 @@
 ---
-path: "doctor-who-is-all-over-the-map-in-an-episode-about-ment"
+path: "post/doctor-who-is-all-over-the-map-in-an-episode-about-ment"
 title: "Doctor Who is all over the map in an episode about mental health"
 author: "Caroline Siede"
 date: "2020-02-09"
