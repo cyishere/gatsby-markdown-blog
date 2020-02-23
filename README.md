@@ -6,10 +6,9 @@
 
 ## TO DO
 - [x] Posts by category;
-- [ ] Navigation in the same category；
+- [x] Navigation；
 - [ ] Display all tags in one page;
 - [ ] Posts by tag;
-- [ ] Create pages by Markdown contents;
 - [ ] Posts by author;
 - [ ] Pagination;
 - [ ] SEO: [https://www.gatsbyjs.org/docs/add-seo-component/](https://www.gatsbyjs.org/docs/add-seo-component/);

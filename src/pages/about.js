@@ -11,6 +11,11 @@ const About = () => {
                     <ul>
                         <li>This boilerplate use the wonderful CSS Framework <a href="https://getuikit.com" target="_blank" rel="noopener noreferrer">UIkit</a>.
                             With React the attributes <code>uk-*</code> which trigger the Javascript functions should rewrite to <code>data-uk-*</code>, like in the example below:
+                            <pre>
+{`<div class="uk-cover-container">
+    <img src="" alt="" data-uk-cover>
+</div>`}
+                            </pre>
                             
                         </li>
                         <li>Posts are organized by categories.</li>
