@@ -25,7 +25,7 @@ const PostsList = () => {
                 
             `}
             render={data => (
-                <div className="uk-width-2-3 uk-align-center">
+                <div className="uk-width-1-1 uk-width-2-3@l uk-width-2-3@xl uk-align-center">
                     {data.allMarkdownRemark.edges.map(({ node }) => (
 
                         <div className="uk-card uk-card-default uk-margin-bottom uk-grid" key={node.id}>

@@ -49,6 +49,47 @@ const createCategoryPages = (createPage, posts) => {
 
 };
 
+const createTagPages = (createPage, posts) => {
+    const allTagsIndexTemplate = path.resolve('src/templates/all-tags-index.js');
+    const singleTagPostsTemplate = path.resolve('src/templates/single-tag-posts.js');
+
+    postsByTag = {};
+
+    posts.forEach(({ node }) => {
+        if (node.frontmatter.tags) {
+            node.frontmatter.tags.forEach(tag => {
+                if (!postsByTag[tag]) {
+                    postsByTag[tag] = [];
+                }
+                postsByTag[tag].push(node);
+            });
+        }
+    });
+
+    const tags = Object.keys(postsByTag);
+
+    createPage({
+        path: '/tags',
+        component: allTagsIndexTemplate,
+        context: {
+            tags: tags.sort()
+        }
+    });
+
+    tags.forEach(tagName => {
+        const posts = postsByTag[tagName];
+        
+        createPage({
+            path: `/tags/${tagName}`,
+            component: singleTagPostsTemplate,
+            context: {
+                posts,
+                tagName
+            }
+        });
+    });
+};
+
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
     const result = await graphql(`
@@ -59,6 +100,8 @@ exports.createPages = async ({ graphql, actions }) => {
                         frontmatter {
                             path
                             category
+                            tags
+                            title
                         }
                     }
                 }
@@ -71,4 +114,6 @@ exports.createPages = async ({ graphql, actions }) => {
     createCategoryPages(createPage, posts);
 
     createSinglePostPage(createPage, posts);
+
+    createTagPages(createPage, posts);
 };

@@ -13,6 +13,7 @@ export const query = graphql`
                 hero
                 date(formatString: "YYYY-MM-DD")
                 path
+                tags
             }
             html
         }
@@ -26,6 +27,7 @@ export const query = graphql`
 
 const PostPage = ({ data }) => {
     const post = data.markdownRemark;
+    const tags = post.frontmatter.tags;
     return (
         <Layout>
             <Helmet>
@@ -44,6 +46,9 @@ const PostPage = ({ data }) => {
                         </span>
                     </p>
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                    <div data-uk-margin>
+                        {tags.forEach(tag => console.log(tag))}
+                    </div>
                 </div>
                 
             </div>

@@ -23,6 +23,9 @@ const Header = () => {
                             <Link to="/music">music</Link>
                         </li>
                         <li className="uk-text-uppercase">
+                            <Link to="/tags">by tags</Link>
+                        </li>
+                        <li className="uk-text-uppercase">
                             <Link to="/about">about</Link>
                         </li>
                     </ul>

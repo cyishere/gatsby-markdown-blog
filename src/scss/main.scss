@@ -9,6 +9,12 @@ html {
     color: $global-text-color;
 }
 
+.tag-group {
+    .uk-button {
+        margin-right: 10px;
+    }
+}
+
 .uk-article {
     .uk-article-meta {
         font-size: 16px;

@@ -40,9 +40,9 @@ const postsByCategory = ({ data, pageContext }) => {
                             </div>
                             <div className="uk-width-2-3">
                                 <div className="uk-card-body">
-                                    <h2 className="uk-card-title">
+                                    <h3 className="uk-card-title">
                                         <Link to={`/${node.frontmatter.path}`}>{node.frontmatter.title}</Link>
-                                    </h2>
+                                    </h3>
                                     <p className="uk-text-meta">
                                         <span uk-icon="icon: user"></span> {node.frontmatter.author} @ {node.frontmatter.date}
                                         <span className="uk-float-right">
