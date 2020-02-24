@@ -41,7 +41,7 @@ const PostsList = () => {
                                         <Link to={`/${node.frontmatter.path}`}>{node.frontmatter.title}</Link>
                                     </h2>
                                     <p className="uk-text-meta">
-                                        <span uk-icon="icon: user"></span> {node.frontmatter.author} @ {node.frontmatter.date}
+                                        <span uk-icon="icon: user"></span> <Link to={`/author/${node.frontmatter.author}`}>{node.frontmatter.author}</Link> @ {node.frontmatter.date}
                                         <span className="uk-float-right">
                                             <span uk-icon="icon: album" className="uk-margin-small-right"></span> 
                                             <Link to={`/${node.frontmatter.category}`}>{node.frontmatter.category}</Link>

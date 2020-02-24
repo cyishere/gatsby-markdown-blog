@@ -11,22 +11,22 @@ const Header = () => {
                 <div className="uk-navbar-right">
                     <ul className="uk-navbar-nav">
                         <li className="uk-text-uppercase">
-                            <Link to="/">home</Link>
+                            <Link to="/" activeClassName="active">home</Link>
                         </li>
                         <li className="uk-text-uppercase">
-                            <Link to="/movie">movie</Link>
+                            <Link to="/movie" activeClassName="active">movie</Link>
                         </li>
                         <li className="uk-text-uppercase">
-                            <Link to="/tv">tv</Link>
+                            <Link to="/tv" activeClassName="active">tv</Link>
                         </li>
                         <li className="uk-text-uppercase">
-                            <Link to="/music">music</Link>
+                            <Link to="/music" activeClassName="active">music</Link>
                         </li>
                         <li className="uk-text-uppercase">
-                            <Link to="/tags">by tags</Link>
+                            <Link to="/tags" activeClassName="active">by tags</Link>
                         </li>
                         <li className="uk-text-uppercase">
-                            <Link to="/about">about</Link>
+                            <Link to="/about" activeClassName="active">about</Link>
                         </li>
                     </ul>
                 </div>

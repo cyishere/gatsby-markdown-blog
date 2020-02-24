@@ -7,9 +7,9 @@
 ## TO DO
 - [x] Posts by category;
 - [x] Navigation；
-- [ ] Display all tags in one page;
-- [ ] Posts by tag;
-- [ ] Posts by author;
+- [x] Display all tags in one page;
+- [x] Posts by tag;
+- [x] Posts by author;
 - [ ] Pagination;
 - [ ] SEO: [https://www.gatsbyjs.org/docs/add-seo-component/](https://www.gatsbyjs.org/docs/add-seo-component/);
 

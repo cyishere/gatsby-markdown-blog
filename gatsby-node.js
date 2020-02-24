@@ -3,19 +3,21 @@ const path = require('path');
 const createSinglePostPage = (createPage, posts) => {
     const singlePostPageTemplate = path.resolve(`./src/templates/post.js`);
 
-    posts.forEach(({ node }) => {
+    posts.forEach(({ node }, index) => {
         createPage({
             path: node.frontmatter.path,
             component: singlePostPageTemplate,
             context: {
-                pathName: node.frontmatter.path
+                pathName: node.frontmatter.path,
+                prev: index === 0 ? null : posts[index - 1].node,
+                next: index === (posts.length - 1) ? null : posts[index + 1].node
             }
         });
     });
 }
 
 const createCategoryPages = (createPage, posts) => {
-    const postsByCategoryTemplate = path.resolve('src/templates/posts-by-category.js');
+    const postsByCategoryTemplate = path.resolve(`./src/templates/posts-by-category.js`);
 
     const postsByCategory = {};
 
@@ -50,8 +52,8 @@ const createCategoryPages = (createPage, posts) => {
 };
 
 const createTagPages = (createPage, posts) => {
-    const allTagsIndexTemplate = path.resolve('src/templates/all-tags-index.js');
-    const singleTagPostsTemplate = path.resolve('src/templates/single-tag-posts.js');
+    const allTagsIndexTemplate = path.resolve(`./src/templates/all-tags-index.js`);
+    const singleTagPostsTemplate = path.resolve(`./src/templates/single-tag-posts.js`);
 
     postsByTag = {};
 
@@ -90,6 +92,38 @@ const createTagPages = (createPage, posts) => {
     });
 };
 
+const createAuthorPages = (createPage, posts) => {
+    const postsByAuthorTemplates = path.resolve(`./src/templates/posts-by-author.js`);
+
+    const postsByAuthor = {};
+
+    posts.forEach(({ node }) => {
+        const author = node.frontmatter.author;
+        // console.log(author);
+        if (!postsByAuthor[author]) {
+            postsByAuthor[author] = [];
+        }
+        postsByAuthor[author].push(node);
+    });
+
+    const authors = Object.keys(postsByAuthor);
+
+    // console.log(authors);
+
+    authors.forEach(authorName => {
+        const posts = postsByAuthor[authorName];
+
+        createPage({
+            path: `/author/${authorName}`,
+            component: postsByAuthorTemplates,
+            context: {
+                posts,
+                authorName
+            }
+        });
+    });
+};
+
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
     const result = await graphql(`
@@ -102,6 +136,7 @@ exports.createPages = async ({ graphql, actions }) => {
                             category
                             tags
                             title
+                            author
                         }
                     }
                 }
@@ -116,4 +151,6 @@ exports.createPages = async ({ graphql, actions }) => {
     createSinglePostPage(createPage, posts);
 
     createTagPages(createPage, posts);
+
+    createAuthorPages(createPage, posts);
 };

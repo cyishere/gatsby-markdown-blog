@@ -28,7 +28,9 @@ html {
     }
 }
 
-.uk-totop {
-    right: 0;
-    bottom: 20px;
+li {
+    a.active {
+        color: #333;
+        border-bottom: 3px solid #333;
+    }
 }

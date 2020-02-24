@@ -27,7 +27,7 @@ const postsByCategory = ({ data, pageContext }) => {
     const { categoryName } = pageContext;
     return (
         <Layout>
-            <div className="uk-width-2-3 uk-align-center">
+            <div className="uk-width-1-1 uk-width-2-3@l uk-width-2-3@xl uk-align-center">
                 <h2 className="uk-article-title uk-margin-bottom">Posts in Category: {categoryName}</h2>
                 {data.allMarkdownRemark.edges.map(({node}) => {
                     return (

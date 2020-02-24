@@ -25,9 +25,12 @@ export const query = graphql`
     }
 `;
 
-const PostPage = ({ data }) => {
+const PostPage = ({ data, pageContext }) => {
     const post = data.markdownRemark;
     const tags = post.frontmatter.tags;
+    
+    const { prev, next } = pageContext;
+
     return (
         <Layout>
             <Helmet>
@@ -46,11 +49,31 @@ const PostPage = ({ data }) => {
                         </span>
                     </p>
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                    <div data-uk-margin>
-                        {tags.forEach(tag => console.log(tag))}
+                    <div className="uk-width-1-1 uk-margin-large-top">
+                        {tags.map((tag, index) => {
+                            return (
+                                <Link to={`/tags/${tag}`} class="uk-button uk-button-default uk-margin-right" key={index}>{tag}</Link>
+                            )
+                        })}
                     </div>
                 </div>
                 
+            </div>
+            
+            <hr />
+
+            <div className="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-3-4 uk-align-center uk-margin-large-bottom">
+                <h3>More Posts...</h3>
+                {prev &&
+                    <div className="uk-card uk-card-default uk-card-body uk-margin-bottom">
+                        <h4><Link to={prev.frontmatter.path}>{prev.frontmatter.title}</Link></h4>
+                    </div>
+                }
+                {next &&
+                    <div className="uk-card uk-card-default uk-card-body">
+                        <h4><Link to={`/${next.frontmatter.path}`}>{next.frontmatter.title}</Link></h4>
+                    </div>
+                }
             </div>
             
         </Layout>
