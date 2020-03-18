@@ -1,10 +1,8 @@
 ---
-path: "post/on-star-trek-picard-old-friends-make-new-allies"
+path: post/on-star-trek-picard-old-friends-make-new-allies
 title: "On Star Trek: Picard, old friends make new allies"
-author: "Zack Handlen"
-date: "2020-02-19"
-category: "tv"
-hero: "https://i.kinja-img.com/gawker-media/image/upload/c_scale,f_auto,fl_progressive,q_80,w_1600/ttdlrdmrd6aa22qfalto.jpg"
+date: 2020-02-19
+hero: 
 tags: ["Si-Fi", "Star Trek", "American TV Show"]
 ---
 

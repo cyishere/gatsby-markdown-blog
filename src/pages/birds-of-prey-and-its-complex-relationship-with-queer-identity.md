@@ -1,10 +1,8 @@
 ---
-path: "post/birds-of-prey-and-its-complex-relationship-with-queer-identity"
-title: "Birds Of Prey and its complex relationship with queer identity"
-author: "Shannon Miller"
-date: "2020-02-12"
-category: "movie"
-hero: "https://i.kinja-img.com/gawker-media/image/upload/c_scale,f_auto,fl_progressive,q_80,w_1600/zttgnveosov3reo9gyxm.jpg"
+path: post/birds-of-prey-and-its-complex-relationship-with-queer-identity
+title: Birds Of Prey and its complex relationship with queer identity
+date: 2020-02-12
+hero: ../images/birds-of-prey-and-its-complex-relationship-with-queer-identity.png
 tags: ["Si-Fi", "superhero", "DC", "feminism"]
 ---
 

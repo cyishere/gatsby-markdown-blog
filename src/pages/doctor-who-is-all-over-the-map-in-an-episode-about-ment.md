@@ -1,10 +1,8 @@
 ---
-path: "post/doctor-who-is-all-over-the-map-in-an-episode-about-ment"
-title: "Doctor Who is all over the map in an episode about mental health"
-author: "Caroline Siede"
-date: "2020-02-09"
-category: "tv"
-hero: "https://i.kinja-img.com/gawker-media/image/upload/c_scale,f_auto,fl_progressive,q_80,w_1600/ywxqowqocuf5nc14vhjq.jpg"
+path: post/doctor-who-is-all-over-the-map-in-an-episode-about-ment
+title: Doctor Who is all over the map in an episode about mental health
+date: 2020-02-09
+hero: ../images/doctor-who-is-all-over-the-map-in-an-episode-about-ment.png
 tags: ["Si-Fi", "English TV Show"]
 ---
 

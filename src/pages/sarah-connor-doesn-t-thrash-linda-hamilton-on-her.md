@@ -1,10 +1,8 @@
 ---
-path: "post/sarah-connor-doesn-t-thrash-linda-hamilton-on-her"
+path: post/sarah-connor-doesn-t-thrash-linda-hamilton-on-her
 title: '“Sarah Connor doesn’t thrash”: Linda Hamilton on her enduring Terminator character'
-author: "Alex McLevy"
-date: "2020-02-13"
-category: "movie"
-hero: "https://i.kinja-img.com/gawker-media/image/upload/c_scale,f_auto,fl_progressive,q_80,w_1600/baqyk60eredebvr7podu.jpg"
+date: 2020-02-13
+hero: ../images/sarah-connor-doesn-t-thrash-linda-hamilton-on-her.png
 tags: ["Terminator", "feminism"]
 ---
 

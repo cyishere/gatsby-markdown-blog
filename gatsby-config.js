@@ -12,26 +12,21 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        resolve: `gatsby-remark-prismjs`,
-        options: {
-          classPrefix: 'language-',
-          inlineCodeMarker: null,
-          aliases: {
-            sh: 'bash'
-          },
-          showLineNumbers: false,
-          noInlineHighlight: false,
-        }
+        name: 'posts',
+        path: `${__dirname}/src/pages`
       }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'posts',
-        path: `${__dirname}/content/posts/`
+        name: 'images',
+        path: `${__dirname}/src/images`
       }
     }
   ]

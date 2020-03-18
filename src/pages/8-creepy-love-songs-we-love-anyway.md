@@ -1,10 +1,8 @@
 ---
-path: "post/8-creepy-love-songs-we-love-anyway"
-title: "8 creepy love songs we love anyway"
-author: "Caroline Siede"
-date: "2020-02-17"
-category: "music"
-hero: "https://i.kinja-img.com/gawker-media/image/upload/c_scale,f_auto,fl_progressive,q_80,w_1600/ywsqr0on37of3c1vhhxw.jpg"
+path: post/8-creepy-love-songs-we-love-anyway
+title: 8 creepy love songs we love anyway
+date: 2020-02-17
+hero: ../images/8-creepy-love-songs-we-love-anyway.png
 tags: ["list"]
 ---
 

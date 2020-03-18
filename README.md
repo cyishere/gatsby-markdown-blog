@@ -4,12 +4,18 @@
 
 **GatsMark** is a blog boilerplate with Markdown with GatsbyJS.
 
+## Log
+
+### Update @ 2020-03-18
+
+To use the <code>gatsby-image</code>, I restructured this code and removed UIkit by replacing to <code>sakura.css</code>.
+
 ## TO DO
-- [x] Posts by category;
+- [ ] Posts by category;
 - [x] Navigation；
 - [x] Display all tags in one page;
 - [x] Posts by tag;
-- [x] Posts by author;
+- [ ] Posts by author;
 - [ ] Pagination: [Display Paginated Posts](https://egghead.io/lessons/react-display-paginated-posts-using-gatsby);
 - [ ] SEO: [https://www.gatsbyjs.org/docs/add-seo-component/](https://www.gatsbyjs.org/docs/add-seo-component/);
 - [x] <code>build</code>时由于<code>UIkit</code>会报错，需解决；

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const PostsList = () => {
   return (
@@ -11,12 +12,16 @@ const PostsList = () => {
               node {
                 id
                 frontmatter {
-                  category
-                  author
                   date(formatString: "YYYY-MM-DD")
                   title
                   path
-                  hero
+                  hero {
+                    childImageSharp {
+                      fixed {
+                        ...GatsbyImageSharpFixed
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -26,12 +31,17 @@ const PostsList = () => {
       render={data => (
         <section>
           {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div key={node.id}>
-              <div>
-                <Link to={node.frontmatter.path}>
-                  <img src={node.frontmatter.hero} alt={node.frontmatter.title} />
-                </Link>
-              </div>
+            <div className="card margin-top-large margin-bottom-large" key={node.id}>
+              
+              {node.frontmatter.hero &&
+                <div>
+                  <Link to={node.frontmatter.path}>
+                    <Img fixed={node.frontmatter.hero.childImageSharp.fixed} alt={node.frontmatter.title} />
+                  </Link>
+                </div>  
+              }
+                
+              
               <h3><Link to={node.frontmatter.path}>{node.frontmatter.title}</Link></h3>
               <p>@ {node.frontmatter.date}</p>
             </div>
